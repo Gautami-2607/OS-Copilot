@@ -58,6 +58,8 @@ class ToolManager:
             self.generated_tools = json.load(f2)
         self.vectordb_path = f"{generated_tool_repo_dir}/vectordb"
 
+        embedding_function = ""
+
         if not os.path.exists(self.vectordb_path):
             os.makedirs(self.vectordb_path)
         os.makedirs(f"{generated_tool_repo_dir}/tool_code", exist_ok=True)
